@@ -11,6 +11,8 @@ class PoemsController < ApplicationController
   # GET /poems/1
   # GET /poems/1.json
   def show
+    @poem = Poem.find(params[:id])
+    render json: @poem
   end
 
   # GET /poems/new
